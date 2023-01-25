@@ -1,5 +1,7 @@
 ## Prince Solomon
 
+### [Prince.me](https://github.com.io/me)
+
 [//]: # (<img src="./preview.png" alt="Preview of Uduak John's Portfolio">)
 
 ### About Me
@@ -15,7 +17,3 @@ I like to spend my free time adding on to my web stack and chasing my dream of b
 [Github](https://github.com/princexz)
 [Twitter](https://twitter.com/angelprince_me)
 [Linkedin](https://www.linkedin.com/in/prinecxz/)
-
-## Author :black_nib:
-
-* **Prince Solomon** [princexz](https://github.com/princexz)
