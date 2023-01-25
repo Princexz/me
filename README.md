@@ -1,8 +1,10 @@
 ## Prince Solomon
 
-### [Prince.me](https://github.com.io/me)
+### view the website here  
 
-[//]: # (<img src="./preview.png" alt="Preview of Uduak John's Portfolio">)
+https://princexz.github.io/me/
+
+[//]: # (<img src="./portfolio.png" alt="Preview of Prince Solomon's Portfolio">)
 
 ### About Me
 
