@@ -1,6 +1,6 @@
 /* 
-    Theme Name: Dirio - Personal Responsive WebPage Tamplate
-    Author: Themesdesign
+    Theme Name: Dirio - Personal Responsive WebPage Template
+    Author: Themes-design
     Version: 1.0.0
     Created: September 2019
     File Description: Main JS file of the template

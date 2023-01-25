@@ -41,17 +41,29 @@ p {
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-image: -webkit-linear-gradient(330deg, #f80 0%, #ff744e 100%);
-  background-image: linear-gradient(120deg, #ff6a41 0%, #f80 100%);
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(330deg, #576ee0 0%, #576ee0 100%);
+  background-image: linear-gradient(120deg, #576ee0 0%, #576ee0 100%);
+}
+
+/*********
+root styling
+*********/
+
+:root{
+--body-color: #0e101a;
+    --primary-color: #576ee0;
+    --container-color: #1d2135;
+    --text-dom-color: #fff;
+    --text-in-color: #0e101a;
 }
 
 /*****************
@@ -85,7 +97,9 @@ p {
   flex-direction: row;
   -webkit-flex-direction: row;
 }
-
+hr {
+  background: #576ee0 !important;
+}
 .btn-round {
   border-radius: 30px;
 }
@@ -109,7 +123,7 @@ p {
 
 .btn-view-project {
   color: #fff !important;
-  background: #ff9800;
+  background: #576ee0;
   font-size: 14px;
   transition: all 0.5s;
   font-weight: 500;
@@ -133,7 +147,6 @@ p {
   border: 1px solid;
   text-decoration: none;
 }
-
 .btn-outline {
   background-color: transparent;
   border: 1px solid;
@@ -164,7 +177,7 @@ p {
   left: 0px;
   right: 0px;
   content: "";
-  background: #ff9800;
+  background: #576ee0;
   height: 39px;
   width: 2px;
   margin: 0px auto;
@@ -271,7 +284,13 @@ p {
 .menu-toggle span {
   line-height: 27px;
 }
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #576ee0 !important;
+}
 
+ .navbar-custom .navbar-nav li.active a {
+    color: #576ee0 !important;
+}
 /*---NAVBAR STICKY--*/
 
 .nav-sticky.navbar-custom {
@@ -319,7 +338,7 @@ p {
 }
 .loader::before, .loader::after{
   content: '';
-  border: 1em solid #f80;
+  border: 1em solid #576ee0;
   border-radius: 50%;
   width: inherit;
   height: inherit;
@@ -371,12 +390,12 @@ p {
 }
 
 .home-title .para-desc {
-  font-size: 18px;
+  font-size: 17px;
   max-width: 650px;
 }
 
 .home-down {
-  color: #fff;
+  color: #576ee0;
   font-size: 40px;
   padding-top: 40px;
   padding-left: 20px;
@@ -384,11 +403,11 @@ p {
   transition: all 0.3s ease;
 }
 .home-dnw {
-  color: #ff9800;
+  color: #576ee0;
   font-size: 30px;
-  margin-top: 1px;
+  padding-top: 1px;
   display: inline-block;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
 }
 
 .home-down:hover {
@@ -399,7 +418,9 @@ p {
 .home-down:focus {
   color: #fff;
 }
-
+.nam{
+color:#576ee0;
+}
 /* arrow css3 animation */
 
 @-webkit-keyframes bounce {
@@ -505,7 +526,12 @@ p {
   background: #f8f9fa;
   border-color: transparent;
 }
-
+.Bg-about {
+  background: #242a35;
+}
+h6, h3 {
+  color: #fff !important;
+}
 .nav-tabs .nav-link {
   text-transform: uppercase;
   color: #212121;
@@ -521,18 +547,39 @@ p {
 .nav-tabs .nav-link.active {
   color: #ffffff;
   border-color: transparent;
-}
-
-.nav-tabs .nav-link:hover {
-  background-color: #242a35;
+  background: #576ee0 !important;
 }
 
 .about-img img {
   max-width: 300px;
-  border: 5px solid #fff;
+  border: 1px solid #576ee0;
   cursor: pointer;
   background-color: rgb(250, 249, 249);
-  box-shadow: 1px 10px 30px -10px black;
+  box-shadow: 1px 10px 30px -10px #576ee0;
+}
+.text-custom {
+  color: #576ee0 !important;
+}
+
+.btn-custom {
+  background: #576ee0 !important;
+  border: 1px solid #576ee0 !important;
+}
+.btn-custom:hover {
+  color: #576ee0 !important;
+  background-color: transparent !important;
+  border: 1px solid #576ee0;
+}
+.btn-outline {
+  color: #576ee0 !important;
+  background-color: transparent !important;
+  border: 1px solid #576ee0 !important;
+}
+
+.btn-outline:hover {
+  border: 1px solid #576ee0 !important;
+  background: #576ee0 !important;
+  color: #fff !important;
 }
 
 /******************
@@ -549,7 +596,7 @@ p {
 .container-filter li a {
   display: block;
   font-size: 11px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #576ee0;
   color: #6c757d !important;
   padding: 0px 15px;
   margin: 5px 3px;
@@ -564,26 +611,28 @@ p {
 
 .container-filter li a.active {
   color: #fff !important;
-  border: 1px solid;
+  border: 1px solid #576ee0 !important;
+  background: #576ee0 !important;
 }
 
 .container-filter li a:hover {
   color: #fff !important;
-  border: 1px solid;
+  border: 1px solid #576ee0 !important;
+  background: #576ee0 !important;
 }
 
 .category {
   display: block;
   font-size: 11px;
-  color: #ff9800 !important;
+  color: #576ee0 !important;
   padding: 0px 15px;
   margin: 5px 3px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
   line-height: 34px;
   border-radius: 3px;
-  border: 1px solid #ff9800;
+  border: 1px solid #576ee0;
 }
 
 .spacing {
@@ -671,21 +720,21 @@ p {
 *******************/
 
 .bg-contact {
-  background: #fff;
+ background: #242a35;
 }
 
 .contact-wrapper {
   color: #cacaca;
 }
-.conme{
-  color: #000;
-}
+
 .custom-form .form-control {
-  border: 1px solid #51586b;
+  border: 1px solid #576ee0;
   height: 48px;
   padding: 0.375rem 1.5rem;
   background: transparent;
   color: #6c757d;
+  font-size: 13px;
+  letter-spacing: 2px;
 }
 
 .custom-form .form-control {
@@ -704,7 +753,7 @@ p {
 }
 
 #ajaxsuccess {
-  font-size: 16px;
+  font-size: 13px;
   width: 100%;
   display: none;
   clear: both;
@@ -718,7 +767,7 @@ p {
   border: 2px solid #f36270;
   color: #f36270;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .contact-loader {
@@ -732,9 +781,12 @@ p {
 
 #success_page h3 {
   color: #0dba26;
-  font-size: 22px;
+  font-size: 20px;
 }
-
+.mb-0:hover{
+    color: #576ee0!important;
+    cursor: pointer;
+}
 /*******************
     7.footer
 ********************/
@@ -746,7 +798,7 @@ p {
 .footer .social-icons li a,
 .social-icons li a {
   display: block;
-  color: #ff9800;
+  color: #576ee0;
   font-size: 15px;
   height: 38px;
   width: 38px;
@@ -754,13 +806,15 @@ p {
   text-align: center;
   text-decoration: none !important;
   transition: all 0.4s;
-  border: 2px solid #ff9800;
+  border: 2px solid #576ee0;
   border-radius: 50%;
 }
 
 .footer .social-icons li a:hover,
 .social-icons li a:hover {
   color: #fff;
+  background: #576ee0 !important;
+  border: 2px solid #576ee0 !important;
 }
 
 .footer .logo {

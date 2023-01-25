@@ -1,12 +1,13 @@
-
+//keyword typing
 $(".element").typed({
-    strings: ["Prine Solomon", "a Full-Stack Developer", "a Computer Progammer", "a Software Engineer"],
+    strings: ["Prince Solomon", "a Full-Stack Developer", "a Software Engineer", "a Computer Programmer"],
     typeSpeed: 10,
     loop:true,
-    backDelay: 1500
+    backDelay: 1800
   });
 
+//background loader_bg
   setTimeout(function(){
     $('.loader_bg').fadeToggle();
-}, 2000);
+}, 1500);
  
