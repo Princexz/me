@@ -17,7 +17,7 @@
 */
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "FuturaLTPro-Book", sans-serif;
   font-size: 14px;
 }
 
@@ -538,7 +538,7 @@ h6, h3 {
   padding: 16px 10px;
   border-radius: 0;
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
+  font-family: "FuturaLTPro-Book", sans-serif;
 }
 
 .nav-tabs .nav-item.show .nav-link,
@@ -817,7 +817,7 @@ h6, h3 {
 .footer .logo {
   font-weight: 700;
   letter-spacing: 3px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "FuturaLTPro-Book", sans-serif;
   font-size: 20px;
 }
 .text-black0{
