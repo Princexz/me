@@ -1,9 +1,9 @@
 //keyword typing
 $(".element").typed({
-    strings: ["Prince Solomon", "a Software Engineer", "a IT Support Engineer", "a Computer & Robotic Engineer"],
-    typeSpeed: 10,
+    strings: ["Prince Solomon", "a Software Engineer", "a Google IT Support Engineer", "a Computer & Robotic Engineer"],
+    typeSpeed: 15,
     loop: true,
-    backDelay: 150
+    backDelay: 200
   });
 
 //background loader_bg
