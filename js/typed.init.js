@@ -1,6 +1,6 @@
 //keyword typing
 $(".element").typed({
-    strings: ["Prince Solomon", "a Software Engineer", "a Google IT Support Engineer", "a Computer & Robotic Engineer"],
+    strings: ["Prince Solomon", "a Software Engineer", "a Google IT Support Engineer", "a Computer & Robotics Engineer"],
     typeSpeed: 15,
     loop: true,
     backDelay: 200
