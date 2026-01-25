@@ -1,0 +1,226 @@
+/* Dark Mode Styles */
+
+/* Light Mode (Default) */
+:root {
+  --body-color: #fff;
+  --bg-secondary: #f8f9fa;
+  --text-color: #1a1a1a;
+  --text-light: #666666;
+  --border-color: #e0e0e0;
+  --card-bg: #ffffff;
+  --hover-bg: #f0f0f0;
+  --navbar-bg: rgba(255, 255, 255, 0.95);
+  --overlay-bg: rgba(0, 0, 0, 0.3);
+  --input-bg: #ffffff;
+  --input-border: #ddd;
+  --button-hover: #e8e8e8;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  --body-color: #1a1a1a;
+  --bg-secondary: #242a35;
+  --text-color: #ffffff;
+  --text-light: #b0b0b0;
+  --border-color: #404854;
+  --card-bg: #2d3139;
+  --hover-bg: #3a404a;
+  --navbar-bg: rgba(29, 33, 53, 0.95);
+  --overlay-bg: rgba(0, 0, 0, 0.6);
+  --input-bg: #3a404a;
+  --input-border: #505866;
+  --button-hover: #505866;
+}
+
+/* General Transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Body */
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+/* Text Colors */
+.text-dark-mode {
+  color: var(--text-color);
+}
+
+.text-light-mode {
+  color: var(--text-light);
+}
+
+/* Card Styles */
+.card,
+.portfolio-box,
+.service-box {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+/* Navbar */
+.navbar,
+.navbar-custom {
+  background-color: var(--navbar-bg);
+  border-bottom-color: var(--border-color);
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--text-color) !important;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Backgrounds */
+.bg-light {
+  background-color: var(--body-color) !important;
+  color: var(--text-color) !important;
+}
+
+.bg-white {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary) !important;
+}
+
+.section-title {
+  color: var(--text-color);
+}
+
+/* Input Fields */
+input,
+textarea,
+select {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border-color: var(--input-border);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-light);
+}
+
+/* Buttons */
+.btn-secondary,
+.btn-outline-secondary {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.btn-secondary:hover,
+.btn-outline-secondary:hover {
+  background-color: var(--hover-bg);
+  border-color: var(--text-light);
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg-secondary);
+  color: var(--text-color);
+  border-top-color: var(--border-color);
+}
+
+footer a {
+  color: var(--primary-color);
+}
+
+footer a:hover {
+  color: var(--text-color);
+}
+
+/* Heading Colors */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+}
+
+/* Overlay */
+.bg-overlay {
+  background-color: var(--overlay-bg);
+}
+
+/* HR */
+hr {
+  border-color: var(--border-color);
+}
+
+/* Scrollbar in Dark Mode */
+body.dark-mode::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(120deg, #576ee0 0%, #576ee0 100%);
+}
+
+/* Additional Elements */
+.table {
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.table thead th {
+  border-color: var(--border-color);
+  background-color: var(--bg-secondary);
+}
+
+.table td {
+  border-color: var(--border-color);
+}
+
+/* Badge */
+.badge {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Highlight Text */
+mark {
+  background-color: var(--hover-bg);
+  color: var(--text-color);
+}
+
+/* Code Blocks */
+code,
+pre {
+  background-color: var(--bg-secondary);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+/* Dark Mode Toggle Button Styling */
+.theme-toggle {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  z-index: 999;
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-color);
+  color: var(--text-color);
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle:hover {
+  background-color: var(--hover-bg);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    top: 80px;
+    right: 15px;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+}
