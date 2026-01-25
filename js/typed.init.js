@@ -1,7 +1,24 @@
 //keyword typing - jQuery version with continuous looping
-$(document).ready(function() {
-  // Check if typed.js is loaded
-  if (typeof Typed !== 'undefined') {
+(function() {
+  'use strict';
+  
+  // Wait for DOM to be ready
+  function initTyping() {
+    var element = document.querySelector('.element');
+    
+    if (!element) {
+      console.warn('Element with class "element" not found');
+      return;
+    }
+    
+    // Check if Typed is available
+    if (typeof Typed === 'undefined') {
+      console.warn('Typed.js not loaded');
+      setTimeout(initTyping, 100); // Retry after 100ms
+      return;
+    }
+    
+    // Initialize Typed.js
     var options = {
       strings: [
         "Prince Solomon",
@@ -22,12 +39,17 @@ $(document).ready(function() {
       fadeOut: false
     };
     
-    // Initialize Typed.js
-    var typed = new Typed('.element', options);
-  } else {
-    console.warn('Typed.js library not loaded');
+    // Create new Typed instance
+    new Typed(element, options);
   }
-});
+  
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTyping);
+  } else {
+    initTyping();
+  }
+})();
 
 // Background loader fade out
 (function() {
