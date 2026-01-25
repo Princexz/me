@@ -3,18 +3,20 @@ $(document).ready(function() {
   $(".element").typed({
     strings: [
       "Prince Solomon",
+      "a Full Stack Developer",
       "a Software Engineer",
       "a Google IT Support Engineer",
       "a Computer & Robotics Engineer"
     ],
-    typeSpeed: 80,
-    backSpeed: 50,
-    backDelay: 800,
-    startDelay: 300,
+    typeSpeed: 60,
+    backSpeed: 40,
+    backDelay: 1500,
+    startDelay: 500,
     loop: true,
     loopCount: Infinity,
     showCursor: true,
     cursorChar: '|',
+    smartBackspace: true,
     resetCallback: function() {
       // Reset callback to ensure continuous looping
     }
@@ -35,4 +37,3 @@ $(document).ready(function() {
     }
   }, 1500);
 })();
- 

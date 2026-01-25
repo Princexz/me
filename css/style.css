@@ -467,9 +467,44 @@ hr {
   color: #fff;
 }
 .nam{
-color:#576ee0;
+  color:#576ee0;
 }
-/* arrow css3 animation */
+
+/* Typed.js Cursor Styling */
+.typed-cursor {
+  font-size: 1em;
+  animation: typedBlink 0.7s infinite;
+  color: #576ee0;
+  font-weight: bold;
+}
+
+@keyframes typedBlink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Typing Text Animation */
+.element {
+  color: #576ee0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  animation: textGlow 2s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(87, 110, 224, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(87, 110, 224, 0.9), 0 0 30px rgba(87, 110, 224, 0.7);
+  }
+}
+
+/* Arrow css3 animation */
 
 @-webkit-keyframes bounce {
   0%,
