@@ -1,6 +1,6 @@
 //keyword typing - jQuery version with continuous looping
 $(document).ready(function() {
-  $(".element").typed({
+  var options = {
     strings: [
       "Prince Solomon",
       "a Full Stack Developer",
@@ -13,14 +13,31 @@ $(document).ready(function() {
     backDelay: 1500,
     startDelay: 500,
     loop: true,
-    loopCount: Infinity,
+    loopCount: false,
     showCursor: true,
     cursorChar: '|',
     smartBackspace: true,
+    fadeOut: false,
     resetCallback: function() {
-      // Reset callback to ensure continuous looping
+      // Ensure typing continues to loop
+    },
+    completeCallback: function() {
+      // Continue looping after completion
+    },
+    preStringTyped: function(pos, self) {
+      // Callback before string is typed
+    },
+    onComplete: function(self) {
+      // Restart the loop
+      self.cursor.style.display = 'none';
+      setTimeout(function() {
+        self.cursor.style.display = 'block';
+      }, 500);
     }
-  });
+  };
+  
+  // Initialize Typed.js with enhanced looping
+  var typed = new Typed('.element', options);
 });
 
 // Background loader fade out
