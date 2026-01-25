@@ -1006,3 +1006,188 @@ canvas {
   position: relative;
   z-index: 2;
 }
+
+/* ========================================
+   Portfolio Item Animated Box Outline
+   ======================================== */
+
+.item-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.item-box::before,
+.item-box::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #576ee0, #a78bfa, #60a5fa, #576ee0);
+  background-size: 400% 400%;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: borderGradient 8s ease infinite;
+}
+
+.item-box::before {
+  z-index: -2;
+  padding: 2px;
+}
+
+.item-box::after {
+  z-index: -1;
+  padding: 3px;
+}
+
+.item-box:hover::before,
+.item-box:hover::after {
+  opacity: 1;
+}
+
+@keyframes borderGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animated Border Effect */
+.item-box {
+  background: #1d2135;
+  border: 2px solid transparent;
+  position: relative;
+  box-shadow: inset 0 0 0 2px #2a2f40;
+}
+
+.item-box::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, #576ee0 0%, #a78bfa 25%, #60a5fa 50%, #34d399 75%, #576ee0 100%);
+  background-size: 200% 200%;
+  border-radius: 10px;
+  z-index: -1;
+  opacity: 0;
+  animation: gradientShift 6s ease infinite;
+  transition: opacity 0.3s ease;
+}
+
+.item-box:hover::before {
+  opacity: 1;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Corner Accent Animation */
+.item-box::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: 
+    linear-gradient(135deg, #576ee0 0%, transparent 40%),
+    linear-gradient(225deg, #a78bfa 0%, transparent 40%),
+    linear-gradient(45deg, #60a5fa 0%, transparent 40%),
+    linear-gradient(315deg, #34d399 0%, transparent 40%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.item-box:hover::after {
+  opacity: 0.3;
+  animation: cornerPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes cornerPulse {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Fade In Scale Animation */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Item Container Glow */
+.item-container {
+  transition: filter 0.3s ease;
+  filter: brightness(1);
+}
+
+.item-box:hover .item-container {
+  filter: brightness(1.1) drop-shadow(0 0 20px rgba(87, 110, 224, 0.6));
+}
+
+/* Item Box Transform */
+.item-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(87, 110, 224, 0.3);
+}
+
+/* Enhanced Item Caption */
+.item-caption {
+  position: relative;
+  z-index: 2;
+}
+
+.item-caption h5 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(87, 110, 224, 0.5);
+}
+
+/* Portfolio Section Background Enhancement */
+.Bg-portfolio {
+  position: relative;
+  background: linear-gradient(135deg, #0e101a 0%, #1a1f2e 100%);
+}
+
+.Bg-portfolio::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 100%, rgba(87, 110, 224, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
