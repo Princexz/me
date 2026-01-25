@@ -926,3 +926,48 @@ color:rgba(0,0,0,.5)
     font-size: 31px!important;
   }
 }
+/* Enhanced Particle Animation */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+canvas {
+  display: block;
+}
+
+/* Particle Glow Effect */
+@keyframes particleGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(87, 110, 224, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(87, 110, 224, 0.8));
+  }
+}
+
+/* Additional Animation Enhancement */
+.bg-home {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(87, 110, 224, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(160, 174, 192, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.home-center {
+  position: relative;
+  z-index: 2;
+}
