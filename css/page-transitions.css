@@ -1,0 +1,380 @@
+/* Beautiful Page Transition Animations */
+
+/* Page Fade In/Out Transition */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  animation: pageLoadFade 0.8s ease-out;
+}
+
+@keyframes pageLoadFade {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Reveal Animation */
+.section {
+  opacity: 0;
+  animation: sectionReveal 0.8s ease-out forwards;
+}
+
+.section:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.section:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.section:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes sectionReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered Section Item Animation */
+.section-title,
+.item-box,
+.service-box,
+.team-member {
+  opacity: 0;
+  animation: itemSlideIn 0.6s ease-out forwards;
+}
+
+@keyframes itemSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger effect for grid items */
+.col-lg-4:nth-child(1) .item-box {
+  animation-delay: 0.1s;
+}
+
+.col-lg-4:nth-child(2) .item-box {
+  animation-delay: 0.2s;
+}
+
+.col-lg-4:nth-child(3) .item-box {
+  animation-delay: 0.3s;
+}
+
+.col-lg-4:nth-child(4) .item-box {
+  animation-delay: 0.4s;
+}
+
+.col-lg-4:nth-child(5) .item-box {
+  animation-delay: 0.5s;
+}
+
+.col-lg-4:nth-child(6) .item-box {
+  animation-delay: 0.6s;
+}
+
+/* Navigation Link Transition */
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #576ee0, #a78bfa);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Page Content Transition on Link Click */
+.page-transition {
+  animation: pageTransitionOut 0.3s ease-in forwards;
+}
+
+.page-transition-in {
+  animation: pageTransitionIn 0.3s ease-out forwards;
+}
+
+@keyframes pageTransitionOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+@keyframes pageTransitionIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hero Section Animation */
+.home-title {
+  animation: heroTitleSlide 0.8s ease-out;
+}
+
+.home-title h1 {
+  animation: heroHeadingPulse 1s ease-out;
+}
+
+@keyframes heroTitleSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroHeadingPulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Social Icons Animation */
+.social-icons {
+  animation: socialIconsFade 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.social-icons li {
+  animation: socialIconPulse 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.social-icons li:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.social-icons li:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.social-icons li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes socialIconsFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes socialIconPulse {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+/* Button Hover Transition */
+.btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Text Animation */
+p, h3, h4, h5, h6 {
+  animation: textFadeIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+h3 {
+  animation-delay: 0.2s;
+}
+
+h4 {
+  animation-delay: 0.3s;
+}
+
+h5 {
+  animation-delay: 0.4s;
+}
+
+p {
+  animation-delay: 0.5s;
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Image Lazy Load Animation */
+img {
+  animation: imageFadeIn 0.6s ease-out;
+}
+
+@keyframes imageFadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* Scroll Reveal Animation */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Parallax Effect */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Gradient Text Animation */
+.gradient-text {
+  background: linear-gradient(90deg, #576ee0, #a78bfa, #60a5fa, #34d399);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientFlow 8s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Form Input Animation */
+input, textarea, select {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+input:focus, textarea:focus, select:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(87, 110, 224, 0.3);
+  border-color: #576ee0;
+}
+
+/* Smooth Page Exit Transition */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Loading Bar Animation */
+.loading-bar {
+  height: 3px;
+  background: linear-gradient(90deg, #576ee0, #a78bfa, #60a5fa);
+  animation: loadingBar 2s ease-in-out infinite;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+@keyframes loadingBar {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
+}
