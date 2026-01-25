@@ -1,6 +1,6 @@
 /**
- * Contact Form Enhancements
- * Adds animations and interactions to contact boxes and form
+ * Contact Form Enhancements - Simplified
+ * Adds subtle animations and interactions to contact boxes and form
  */
 
 (function() {
@@ -10,38 +10,17 @@
   function initContactForm() {
     const form = document.getElementById('contact-form');
     const inputs = document.querySelectorAll('.form-control');
-    const submitBtn = form ? form.querySelector('button[type="submit"]') : null;
 
-    // Add focus animations to inputs
+    // Add subtle focus effect to inputs
     if (inputs.length > 0) {
       inputs.forEach(function(input) {
         input.addEventListener('focus', function() {
-          this.parentElement.classList.add('focused');
+          this.style.transition = 'all 0.3s ease';
         });
 
         input.addEventListener('blur', function() {
-          if (!this.value) {
-            this.parentElement.classList.remove('focused');
-          }
+          this.style.transition = '';
         });
-
-        // Add input animation on typing
-        input.addEventListener('input', function() {
-          this.style.animation = 'none';
-          setTimeout(function() {
-            input.style.animation = '';
-          }, 10);
-        });
-      });
-    }
-
-    // Form submission with animation
-    if (form) {
-      form.addEventListener('submit', function(e) {
-        if (submitBtn) {
-          submitBtn.classList.add('loading');
-          submitBtn.style.pointerEvents = 'none';
-        }
       });
     }
   }
@@ -72,51 +51,7 @@
     });
   }
 
-  // Add hover ripple effect
-  function addRippleEffect() {
-    const boxes = document.querySelectorAll('.contact-desc');
-    
-    boxes.forEach(function(box) {
-      box.addEventListener('mouseenter', function() {
-        const ripple = document.createElement('span');
-        ripple.className = 'ripple';
-        ripple.style.cssText = `
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          border-radius: 15px;
-          background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-          animation: rippleAnimation 0.6s ease-out;
-          pointer-events: none;
-        `;
-        this.appendChild(ripple);
-        
-        setTimeout(function() {
-          ripple.remove();
-        }, 600);
-      });
-    });
-  }
-
-  // Add ripple animation keyframes
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes rippleAnimation {
-      0% {
-        transform: scale(0);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 0;
-      }
-    }
-  `;
-  document.head.appendChild(style);
-
-  // Form validation with animation
+  // Simple form validation
   function initFormValidation() {
     const form = document.getElementById('contact-form');
     if (!form) return;
@@ -196,7 +131,6 @@
   function init() {
     initContactForm();
     initContactBoxAnimation();
-    addRippleEffect();
     initFormValidation();
   }
 
