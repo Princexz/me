@@ -19,6 +19,19 @@ https://princexz.github.io/me/
 
 <img src="./portfolio.png" alt="Preview of Prince Solomon's Portfolio">
 
+## Run locally
+
+This portfolio is built with React and Vite.
+
+```sh
+npm install
+npm run dev
+```
+
+Create a production build with `npm run build`. The GitHub Actions workflow publishes
+the `dist` folder to GitHub Pages; configure the repository's Pages source as
+**GitHub Actions** to enable automatic deployments.
+
 ### About Me
 
 I am a Software Developer focused on building high-quality, thoughtful, and intuitive websites and web applications. I’m currently enrolled in a Full-stack Software development program remotely and studying through pair-programming with amazing folks all around the world at [ALX](https://www.alxafrica.com/)
